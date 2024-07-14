@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BusinessObject\**" />
+    <Compile Remove="BusinessService\**" />
+    <Compile Remove="Helper\**" />
+    <Content Remove="BusinessObject\**" />
+    <Content Remove="BusinessService\**" />
+    <Content Remove="Helper\**" />
+    <EmbeddedResource Remove="BusinessObject\**" />
+    <EmbeddedResource Remove="BusinessService\**" />
+    <EmbeddedResource Remove="Helper\**" />
+    <None Remove="BusinessObject\**" />
+    <None Remove="BusinessService\**" />
+    <None Remove="Helper\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Config\ReadAppSettings.cs" />
+    <Compile Remove="Controllers\UserController.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="108.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.6.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YzMedia.Library.Common\YzMedia.Library.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SecurityLibrary">
+      <HintPath>..\Lib\SecurityLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
